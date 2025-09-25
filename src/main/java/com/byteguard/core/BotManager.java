@@ -3,6 +3,7 @@ package com.byteguard.core;
 import com.byteguard.commands.Command;
 import com.byteguard.commands.impl.HelpCommand;
 import com.byteguard.commands.impl.PingCommand;
+import com.byteguard.commands.impl.moderation.WarnCommand;
 import com.byteguard.events.EventDispatcher;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.interactions.commands.build.CommandData;
@@ -20,10 +21,6 @@ import java.util.concurrent.TimeUnit;
 /**
  * Core bot management system for ByteGuard.
  * Handles command registration, event dispatching, and resource management.
- *
- * @author ByteGuard Team
- * @version 1.0.0
- * @since 2025-09-23
  */
 public class BotManager {
     private static final Logger logger = LoggerFactory.getLogger(BotManager.class);
@@ -50,9 +47,12 @@ public class BotManager {
     private void loadCommands() {
         logger.info("Loading commands...");
 
-        // Phase 1 Commands
+        // Utility & Information Commands
         registerCommand(new PingCommand());
         registerCommand(new HelpCommand());
+
+        // Moderation Commands
+        registerCommand(new WarnCommand());
 
         logger.info("✅ Loaded {} commands", commands.size());
     }

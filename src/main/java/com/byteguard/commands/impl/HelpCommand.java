@@ -1,7 +1,6 @@
 package com.byteguard.commands.impl;
 
 import com.byteguard.commands.Command;
-import com.byteguard.core.BotManager;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.interactions.commands.build.CommandData;
@@ -9,7 +8,6 @@ import net.dv8tion.jda.api.interactions.commands.build.Commands;
 
 import java.awt.Color;
 import java.time.Instant;
-import java.util.Map;
 
 /**
  * Help command implementation.
@@ -48,6 +46,7 @@ public class HelpCommand implements Command {
 
         // Add command categories
         addUtilityCommands(embed);
+        addModerationCommands(embed);
         addInformationSection(embed);
         addSupportSection(embed);
 
@@ -99,5 +98,14 @@ public class HelpCommand implements Command {
         support.append("**Documentation:** Coming in Phase 2\n");
 
         embed.addField("🆘 Support & Links", support.toString(), false);
+    }
+
+
+
+    private void addModerationCommands(EmbedBuilder embed) {
+        StringBuilder moderationCommands = new StringBuilder();
+        moderationCommands.append("`/warn <user> [reason]` - Issue a warning to a user\n");
+
+        embed.addField("🛡️ Moderation Commands", moderationCommands.toString(), false);
     }
 }

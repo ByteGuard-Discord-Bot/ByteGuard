@@ -7,10 +7,6 @@ import org.slf4j.LoggerFactory;
 /**
  * Central event dispatcher for ByteGuard.
  * Handles and routes Discord events to appropriate handlers.
- *
- * @author ByteGuard Team
- * @version 1.0.0
- * @since 2025-09-23
  */
 public class EventDispatcher extends ListenerAdapter {
     private static final Logger logger = LoggerFactory.getLogger(EventDispatcher.class);

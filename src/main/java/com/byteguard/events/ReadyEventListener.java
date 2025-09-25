@@ -8,10 +8,6 @@ import org.slf4j.LoggerFactory;
 /**
  * Handles the ReadyEvent when the bot comes online.
  * Logs bot statistics and connection information.
- *
- * @author ByteGuard Team
- * @version 1.0.0
- * @since 2025-09-23
  */
 public class ReadyEventListener extends ListenerAdapter {
     private static final Logger logger = LoggerFactory.getLogger(ReadyEventListener.class);

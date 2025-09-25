@@ -10,10 +10,6 @@ import org.slf4j.LoggerFactory;
 /**
  * Handles slash command interactions for ByteGuard.
  * Routes commands to appropriate handlers and manages execution.
- *
- * @author ByteGuard Team
- * @version 1.0.0
- * @since 2025-09-23
  */
 public class SlashCommandListener extends ListenerAdapter {
     private static final Logger logger = LoggerFactory.getLogger(SlashCommandListener.class);

@@ -13,10 +13,6 @@ import java.util.concurrent.CompletableFuture;
 /**
  * Ping command implementation.
  * Shows bot latency and response time.
- *
- * @author ByteGuard Team
- * @version 1.0.0
- * @since 2025-09-23
  */
 public class PingCommand implements Command {
 

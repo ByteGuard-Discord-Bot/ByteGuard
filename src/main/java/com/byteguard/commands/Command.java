@@ -6,10 +6,6 @@ import net.dv8tion.jda.api.interactions.commands.build.CommandData;
 /**
  * Base interface for all ByteGuard commands.
  * Provides structure for command implementation.
- *
- * @author ByteGuard Team
- * @version 1.0.0
- * @since 2025-09-23
  */
 public interface Command {
 

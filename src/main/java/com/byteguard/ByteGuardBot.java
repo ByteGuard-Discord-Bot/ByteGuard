@@ -17,10 +17,6 @@ import org.slf4j.LoggerFactory;
 /**
  * Main entry point for the ByteGuard Discord Bot.
  * Initializes JDA, configures intents, and starts the bot.
- *
- * @author ByteGuard Team
- * @version 1.0.0
- * @since 2025-09-23
  */
 public class ByteGuardBot {
     private static final Logger logger = LoggerFactory.getLogger(ByteGuardBot.class);

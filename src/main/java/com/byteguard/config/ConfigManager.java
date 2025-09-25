@@ -6,10 +6,6 @@ import org.slf4j.LoggerFactory;
 /**
  * Configuration manager for ByteGuard Discord Bot.
  * Handles environment variables and configuration validation.
- *
- * @author ByteGuard Team
- * @version 1.0.0
- * @since 2025-09-23
  */
 public class ConfigManager {
     private static final Logger logger = LoggerFactory.getLogger(ConfigManager.class);
