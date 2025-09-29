@@ -3,6 +3,8 @@ package com.byteguard.core;
 import com.byteguard.commands.Command;
 import com.byteguard.commands.impl.HelpCommand;
 import com.byteguard.commands.impl.PingCommand;
+import com.byteguard.commands.impl.moderation.BanCommand;
+import com.byteguard.commands.impl.moderation.KickCommand;
 import com.byteguard.commands.impl.moderation.WarnCommand;
 import com.byteguard.events.EventDispatcher;
 import net.dv8tion.jda.api.JDA;
@@ -53,6 +55,8 @@ public class BotManager {
 
         // Moderation Commands
         registerCommand(new WarnCommand());
+        registerCommand(new KickCommand());
+        registerCommand(new BanCommand());
 
         logger.info("✅ Loaded {} commands", commands.size());
     }
