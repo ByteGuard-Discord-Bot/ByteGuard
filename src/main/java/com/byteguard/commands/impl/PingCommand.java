@@ -12,7 +12,7 @@ import java.util.concurrent.CompletableFuture;
 
 /**
  * Ping command implementation.
- * Shows bot latency and response time.
+ * Shows bot latency and response time in milliseconds.
  */
 public class PingCommand implements Command {
 
@@ -52,7 +52,7 @@ public class PingCommand implements Command {
                         .addField("📊 Response Time", totalResponseTime + "ms", true)
                         .addField("🌐 Gateway Ping", gatewayPing + "ms", true)
                         .addField("✅ Status", getStatusText(gatewayPing), true)
-                        .setFooter("ByteGuard v1.0.0", null)
+                        .setFooter("ByteGuard v1.1.0", null)
                         .setTimestamp(Instant.now());
 
                 event.getHook().editOriginalEmbeds(embed.build()).queue();
@@ -73,9 +73,6 @@ public class PingCommand implements Command {
 
     /**
      * Get status color based on ping.
-     *
-     * @param ping Gateway ping in milliseconds
-     * @return Color for embed
      */
     private Color getStatusColor(long ping) {
         if (ping < 100) {
@@ -91,9 +88,6 @@ public class PingCommand implements Command {
 
     /**
      * Get status text based on ping.
-     *
-     * @param ping Gateway ping in milliseconds
-     * @return Status description
      */
     private String getStatusText(long ping) {
         if (ping < 100) {
